@@ -1,0 +1,42 @@
+body {
+  color: azure;
+  margin: 200px;
+  font-family: "Courier New", Courier, monospace;
+  background-image: url("https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg")
+  
+}
+h1 {
+  display: block;
+  padding: 15px 5px;
+}
+.container {
+  background: rgba(16, 62, 73, 0.9);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 30px 60px;
+  max-width: 700px;
+}
+
+.card-title {
+  color: #e7eaf6;
+}
+
+.card-text {
+  color: #e7eaf6;
+}
+
+.card-body {
+  background: #113f67;
+}
+button {
+  background: #a2a8d3;
+  border-color: #38598b;
+  border-radius: 4px;
+}
+button.hover {
+  background: #113f67;
+}
+.container.text-center {
+  background: #a2a8d3;
+}

@@ -43,6 +43,8 @@ search.addEventListener("submit", showCity);
 //show current date & time
 let date = document.querySelector("#date");
 let currentDate = new Date();
+let todaysDate = currentDate.getDate();
+let month = currentDate.getMonth();
 let hour = currentDate.getHours();
 let minutes = currentDate.getMinutes();
 let day = currentDate.getDay();
@@ -55,5 +57,19 @@ let weekDays = [
   "Friday",
   "Saturday"
 ];
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
 
-date.innerHTML = `${weekDays[day]} ${hour}:${minutes}`;
+date.innerHTML = `${weekDays[day]}, ${months[month]} ${todaysDate}, ${hour}:${minutes}`;

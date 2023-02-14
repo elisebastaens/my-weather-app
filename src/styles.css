@@ -8,6 +8,8 @@ body {
 h1 {
   display: block;
   padding: 15px 5px;
+  line-height: 30px;
+  margin-bottom: 0;
 }
 .container {
   background: rgba(16, 62, 73, 0.8);
@@ -41,6 +43,18 @@ button.hover {
   background: rgba(16, 62, 73, 0.8)
 }
 
+li {
+  list-style: none;
+}
+
+#degrees strong {
+  font-size: 32px;
+}
+
+.units {
+  position:relative;
+  top: -12px;
+}
 
 footer {
   text-align: center;

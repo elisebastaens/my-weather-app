@@ -18,7 +18,7 @@
         
 				<form class="search-form" id="search-form">
 						<div class="row">
-							<div class="col-6">
+							<div class="col-8">
 								<input
 									type="search"
 									placeholder="Enter a city..."
@@ -52,16 +52,18 @@
         <br>
 				<h2 id="city">Prague</h2>
         <p id="date"> </p>
-
-				
+        <h3 id="description">Cloudy</h3>
+              
         <div class="row">
           <div class="col-6">
-            <ul>
-              <h3 id="description">Cloudy</h3>
-              <li id="degrees">⛅Degrees °C</li>
-            </ul>
+            <div class="d-flex weather-temperature">
+              <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear" id="icon"/>
+              <div id="degrees"> <strong>12</strong><small class="units">°C | °F</small></li>  
+            </div>
+          </div>
+          
           </div>        
-          <div class="col-6">
+          <div class="col-3">
            <ul>
             <li>Feels like:</li>
             <li>Humidity:</li>
@@ -122,8 +124,8 @@
           </div>
           <br>
           <footer>
-            <p>
-              <a href="https://github.com/elisebastaens/my-weather-app">Open-source code</a> by Elise Bastaens</p>
+            <small>
+              <a href="https://github.com/elisebastaens/my-weather-app">Open-source code</a> by Elise Bastaens</small>
           </footer>
     </div>
 </body>

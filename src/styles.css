@@ -1,18 +1,18 @@
 body {
   color: azure;
-  margin: 200px;
-  font-family: "Courier New", Courier, monospace;
-  background: radial-gradient(circle at 10% 20%, rgba(91, 173, 254, 0.46) 0%, rgba(91, 224, 254, 0.46) 47.2%, rgba(170, 254, 235, 0.43) 90%);
-  
+  margin: 75px;
+  font-family: "Roboto", sans-serif;
+  background-image: url("https://images.pexels.com/photos/1078981/pexels-photo-1078981.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-size: cover;
 }
 h1 {
   display: block;
   padding: 15px 5px;
 }
 .container {
-  background: rgba(16, 62, 73, 0.3);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
-  border-radius: 4px;
+  background: rgba(16, 62, 73, 0.8);
+  box-shadow: 2px 2px 2px rgba(5, 70, 70, 0.6);
+  border-radius: 10px;
   margin: 0 auto;
   padding: 40px;
   max-width: 700px;
@@ -23,11 +23,11 @@ h1 {
 }
 
 .card-text {
-  color: #074414;
+  color: #8ed1bb
 }
 
 .card-body {
-  background: #0d3f2e;
+  background: rgba(16, 62, 73, 0.8)
 }
 button {
   background: #a2d3c8;
@@ -38,5 +38,11 @@ button.hover {
   background: #033b11;
 }
 .container.text-center {
-  background: #8ed1bb;
+  background: rgba(16, 62, 73, 0.8)
+}
+
+
+footer {
+  text-align: center;
+  color: #000;
 }

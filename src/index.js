@@ -3,7 +3,7 @@
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
-  let temperatureTitle = document.querySelector("h5");
+  let temperatureTitle = document.querySelector("#degrees");
   temperatureTitle.innerHTML = `temperature is ${temperature}°C`;
 
   document.querySelector("h3").innerHTML = response.data.weather[0].main;

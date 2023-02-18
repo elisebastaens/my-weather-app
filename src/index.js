@@ -4,22 +4,25 @@ function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let temperatureTitle = document.querySelector("#degrees");
-  temperatureTitle.innerHTML = `temperature is ${temperature}°C`;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#windSpeed");
-  windElement.innerHTML = Math.round(response.data.wind.speed);
   let feelElement = document.querySelector("#feelsLike");
-  feelElement = response.data.main.feels_like;
   let iconElement = document.querySelector("#icon");
+ 
+  temperatureTitle.innerHTML = `temperature is ${temperature}°C`;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  feelElement = response.data.main.feels_like;
   iconElement.setAttribute(
     "src", 
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
   document.querySelector("#description").innerHTML = response.data.weather[0].description;
 }
+
+
+//search for the location
 function searchLocation(position) {
   let apiKey = "f9d0ac5396e7d9e79a39336860e5f2ef";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;

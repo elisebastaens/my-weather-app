@@ -51,6 +51,11 @@ li {
   font-size: 32px;
 }
 
+p {
+  text-transform: capitalize;
+}
+
+
 .units {
   position:relative;
   top: -12px;

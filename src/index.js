@@ -1,12 +1,19 @@
 //show current temperature
 
 function showTemperature(response) {
+  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let temperatureTitle = document.querySelector("#degrees");
   temperatureTitle.innerHTML = `temperature is ${temperature}°C`;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#windSpeed");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let feelElement = document.querySelector('#feelsLike');
+  feelElement = response.data.
 
-  document.querySelector("h3").innerHTML = response.data.weather[0].main;
+  document.querySelector("#description").innerHTML = response.data.weather[0].description;
 }
 function searchLocation(position) {
   let apiKey = "f9d0ac5396e7d9e79a39336860e5f2ef";
@@ -46,7 +53,14 @@ let currentDate = new Date();
 let todaysDate = currentDate.getDate();
 let month = currentDate.getMonth();
 let hour = currentDate.getHours();
+if (hour < 10) {
+  hour = `0${hour}`;
+}
 let minutes = currentDate.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
 let day = currentDate.getDay();
 let weekDays = [
   "Sunday",

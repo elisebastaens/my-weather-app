@@ -1,5 +1,4 @@
 //show current temperature
-
 function showTemperature(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
@@ -10,8 +9,14 @@ function showTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#windSpeed");
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  let feelElement = document.querySelector('#feelsLike');
-  feelElement = response.data.
+  let feelElement = document.querySelector("#feelsLike");
+  feelElement = response.data.main.feels_like;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src", 
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   document.querySelector("#description").innerHTML = response.data.weather[0].description;
 }
@@ -47,7 +52,7 @@ function showCity(event) {
 let search = document.querySelector("#search-form");
 search.addEventListener("submit", showCity);
 
-//show current date & time
+//show date & time
 let date = document.querySelector("#date");
 let currentDate = new Date();
 let todaysDate = currentDate.getDate();
@@ -72,18 +77,18 @@ let weekDays = [
   "Saturday"
 ];
 let months = [
-  "January",
-  "February",
+  "Jan",
+  "Feb",
   "March",
-  "April",
+  "Apr",
   "May",
   "June",
   "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
 ];
 
 date.innerHTML = `${weekDays[day]}, ${months[month]} ${todaysDate}, ${hour}:${minutes}`;

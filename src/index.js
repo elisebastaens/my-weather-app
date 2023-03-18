@@ -9,6 +9,7 @@ function showTemperature(response) {
   let feelElement = document.querySelector("#feelsLike");
   let iconElement = document.querySelector("#icon");
  
+  displayForecast();  
   temperatureTitle.innerHTML = `temperature is ${temperature}°C`;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -113,7 +114,7 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thu", "Fri", "Sat", "Sun"];
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {

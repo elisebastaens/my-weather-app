@@ -95,3 +95,15 @@ let months = [
 ];
 
 date.innerHTML = `${weekDays[day]}, ${months[month]} ${todaysDate}, ${hour}:${minutes}`;
+
+
+//converter celcius & fahrenheit
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitUnit = (14 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#degrees");
+  temperatureElement.innerHTML = Math.round(fahrenheitUnit);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-conversion");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

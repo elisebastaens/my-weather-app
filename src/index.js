@@ -1,4 +1,4 @@
-//search for the location
+//search for location
 function searchLocation(position) {
   let apiKey = "f9d0ac5396e7d9e79a39336860e5f2ef";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -30,7 +30,6 @@ let search = document.querySelector("#search-form");
 search.addEventListener("submit", showCity);
 
 
-
 //date & time
 let date = document.querySelector("#date");
 let currentDate = new Date();
@@ -55,28 +54,13 @@ let weekDays = [
   "Friday",
   "Saturday"
 ];
-let months = [
-  "Jan",
-  "Feb",
-  "March",
-  "Apr",
-  "May",
-  "June",
-  "July",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec"
-];
 
-date.innerHTML = `${weekDays[day]}, ${months[month]} ${todaysDate}, ${hour}:${minutes}`;
+date.innerHTML = `${weekDays[day]}, ${hour}:${minutes}`;
 
 function fomatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
-
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
 }
 

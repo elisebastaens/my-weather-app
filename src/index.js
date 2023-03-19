@@ -82,7 +82,6 @@ function fomatDay(timestamp) {
 
 //show current temperature
 function showTemperature(response) {
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let temperatureTitle = document.querySelector("#degrees");
@@ -91,10 +90,10 @@ function showTemperature(response) {
   let feelElement = document.querySelector("#feelsLike");
   let iconElement = document.querySelector("#icon");
  
-  temperatureTitle.innerHTML = `temperature is ${temperature}°C`;
+  temperatureTitle.innerHTML = `${temperature}°C`;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  feelElement = response.data.main.feels_like;
+  feelElement.innerHTML = Math.round(response.data.main.feels_like);
   iconElement.setAttribute("src", 
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
